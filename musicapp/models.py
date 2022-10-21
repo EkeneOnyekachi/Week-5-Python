@@ -1,4 +1,3 @@
-from email.policy import default
 from django.db import models
 from datetime import date
 
@@ -18,6 +17,7 @@ class Song (models.Model):
     date_released = models.DateField(default=date.today)
     likes = models.IntegerField()
     artiste_id = models.ForeignKey(Artiste, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return (self.title)
